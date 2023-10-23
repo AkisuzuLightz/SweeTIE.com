@@ -1,91 +1,114 @@
 body{
     margin: 0 ; padding: 0 ;
     font-family: Arial, Helvetica, sans-serif;
-}
-header{
-    position: sticky;
-    top: 0;
-    /* enrow */
-    display:flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    background-color: #d9b3ff;
-    /* text */
-    color: #ffffff;
-    font-size: 1em;
-}
-header .logo{
-    /* layout */
-    display: inline-block;
-    padding: 0.5em 2em;
-    /* deco */
-    border-right: #ffffff solid thin;
-    font-weight:bold;
-}
-header nav{display: table;} /* inline-block spacing debug */
-header nav a{
-    /* layout */
-    display: inline-block;
-    padding: 0.5em 1em;
-    border-right: #ffffff solid thin;
-    color: #ffffff;
-    /* text */
-    font-weight: normal;
-    text-align: center;
-    text-decoration: none;
-}
-header nav a.curPage{
-    color: #d9b3ff;
-    background: #ffffff;
-    font-weight:bold;
-}
-main{display: flex;}
-main.welcome{
-    /* encolumn */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    /* bg */
-    padding: 1em 0 0 0;
-    background-color: #ffffff;
-    background-image: linear-gradient(60deg,#b3ecff,#ffffff00,#ffb3d9);
-    background-attachment: fixed;
-    /* text */
-    color: #ffffff;
-    text-align: center;
-    text-shadow: 0px 0px 0.5em #404040;}
-main.welcome h1{font-size: 3em; margin: 0.5em 0 0.5em 0;}
-main.welcome h2{font-size: 2em; margin: 0 0 1.5em 0;}
-main.welcome img{max-width: 32em;}
-main.welcome .temp{
-    /* temp entry */
-    text-align: center;
-    color: #ffffff;
-    position:absolute;
-    top: 42em;
-    z-index: 1;}
-main aside{
-    /* ? requairs a flex-fixed method*/
-    padding: 3em 2em;
-    flex: 25%;
-    background-color: #b3ecff;}
-main article{
-    padding: 2em;
-    flex: 75%;}
-main article h1{ font-size: 2em; margin: 0.5em 0 0 0;}
-main article h2{ margin: 0.75em 0;}
-main article .author{
-    margin: 1em 0 2em 0;
-    text-align: right;
-    font-style: italic;}
-main article p{text-align: justify;}
-footer{
-    padding: 0.25em 2em;
-    background-color: #d9b3ff;
-    color: #ffffff;
-    font-size: 1em;
-    text-align: center;
+    & header{
+        position: sticky;
+        top: 0;
+        /* enrow */
+        display:flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        background-color: #d9b3ff;
+        /* text */
+        color: #ffffff;
+        font-size: 1em;
+        & .logo{
+            /* layout */
+            display: inline-block;
+            padding: 0.5em 2em;
+            /* text */
+            color: #ffffff;
+            text-decoration: none;
+            /* deco */
+            border-right: #ffffff solid thin;
+            font-weight:bold;
+        }
+        & nav{
+            display: table; /* inline-block spacing debug */
+        }
+        & a{
+                /* layout */
+                display: inline-block;
+                padding: 0.5em 1em;
+                border-right: #ffffff solid thin;
+                color: #ffffff;
+                /* text */
+                font-weight: normal;
+                text-align: center;
+                text-decoration: none;
+        }
+        & nav a,
+        & a.logo{
+            &:hover{
+                font-weight: bold;
+                text-decoration-line: underline;
+            }
+            &:active,
+            &.curPage {
+                color: #d9b3ff;
+                background: #ffffff;
+                font-weight: bold;
+            }
+        }
+    }
+    & main{
+        /* requairs a flex-fixed method*/
+        display: flex;
+        &.welcome{
+            /* encolumn */
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            /* bg */
+            padding: 1em 0 0 0;
+            background-color: #ffffff;
+            background-image: linear-gradient(60deg,#b3ecff,#ffffff00,#ffb3d9);
+            background-attachment: fixed;
+            /* text */
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0px 0px 0.5em #404040;
+            & h1{font-size: 3em; margin: 0.5em 0 0.5em 0;}
+            & h2{font-size: 2em; margin: 0 0 1.5em 0;}
+            & img{width: 32em;}
+            & .temp{
+                /* temp entry */
+                text-decoration:none;
+                text-align: center;
+                color: #ffffff;
+                position:absolute;
+                top: 42em;
+                z-index: 1;
+                &:hover{
+                    text-decoration-line: underline;
+                }
+            }
+        }
+        & aside{
+            padding: 3em 2em;
+            flex: 25%;
+            background-color: #b3ecff;
+        }
+        & article{
+        padding: 2em;
+        flex: 75%;
+        & h1{ font-size: 2em; margin: 0.5em 0 0 0;}
+        & h2{ margin: 0.75em 0;}
+        & .author{
+            margin: 1em 0 2em 0;
+            text-align: right;
+            font-style: italic;
+            }
+        }
+    }
+    & footer{
+        padding: 0.25em 2em;
+        background-color: #d9b3ff;
+        color: #ffffff;
+        font-size: 1em;
+        text-align: center;
+    }
 }
