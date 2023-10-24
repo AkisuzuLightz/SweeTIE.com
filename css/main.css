@@ -3,8 +3,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 header{
-    /* debug: black text in browser */
-    color: #ffffff;
     /* posi */
     position: sticky;
     top: 0;
@@ -30,6 +28,8 @@ nav{
     display: table; 
 }
 nav a{
+    /* debug: black text in browser */
+    color: #ffffff;
     /* layout */
     display: inline-block;
     padding: 0.5em 1em;
