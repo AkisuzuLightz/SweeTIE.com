@@ -15,8 +15,9 @@ header{
 .logo{
     /* layout */
     display: inline-block;
+    margin: 0;
     padding: 0.5em 2em;
-    /* text */
+    /* debug: black text */
     color: #ffffff;
     text-decoration: none;
     /* deco */
@@ -28,10 +29,12 @@ nav{
     display: table; 
 }
 nav a{
-    /* debug: black text in browser */
+    /* debug: black text */
     color: #ffffff;
+    text-decoration: none;
     /* layout */
     display: inline-block;
+    margin: 0;
     padding: 0.5em 1em;
     border-right: #ffffff solid thin;
 }
@@ -49,10 +52,6 @@ header a.curPage {
         font-weight: bold;
     }
 /* ----home page---- */
-main{
-    /* requairs a flex-fixed method*/
-    display: flex;
-}
 .welcome{
     /* encolumn */
     display: flex;
@@ -75,7 +74,6 @@ main{
 .welcome h2{font-size: 2em; margin: 0 0 1.5em 0;}
 .welcome img{width: 32em;}
 .welcome .temp{
-    /* temp entry */
     text-decoration:none;
     text-align: center;
     color: #ffffff;
@@ -85,14 +83,30 @@ main{
 }
 .welcome a.temp:hover{text-decoration: underline;}
 /* ----normal pages---- */
+main{display: flex;}
 aside{
-    padding: 3em 2em;
+    /* main flex */
     flex: 25%;
+    /* aside flex */
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3em 2em;
     background-color: #b3ecff;
 }
+aside h1{
+    color: #ffffff;
+}
+aside a{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1em 0;
+}
+
 article{
-    padding: 2em;
+    /* main flex */
     flex: 75%;
+    padding: 2em;
 }
 article h1{ 
     font-size: 2.25em; 
