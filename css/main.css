@@ -18,10 +18,7 @@ header{
 }
 header a{
     /* box */
-    max-width: 6rem;
-    min-width: 4rem;
-    /* layout */
-    flex: 1 1 0;
+    width: 6rem;
     height: 2rem;
     /* posi */
     display: flex;
@@ -43,18 +40,12 @@ header a.curPage {
     background: #ffffff;
 }
 header a.logo{
-    /* layout */
-    flex: 1 1 0;
-    min-width: 10rem;
-    max-width: 16rem;
-    /* posi */
+    width: 25vw;
     padding-left:2rem;
     justify-content: flex-start;
     font-weight: bold;
 }
 header a.logo:hover {text-decoration: none;}
-@media screen and (min-width: 600px) {
-    header a{width: 100%;}}
 /* ----main---- */
 main{
     display: flex;
@@ -62,9 +53,7 @@ main{
 }
 aside{
     /* layout */
-    flex: 1 1 0;
-    min-width: 10rem;
-    max-width: 16rem;
+    width: 25vw;
     display: flex;
     flex-flow: column nowrap;
     padding: 3em 2em;
@@ -77,6 +66,7 @@ aside{
     font-weight:bold ;
     text-shadow: 0 0 0.5rem #404040;
 }
+aside.right{background-image: none;}
 aside h1{
     color: #ffffff;
 }
@@ -129,6 +119,31 @@ footer {
     color: #ffffff;
     font-size: 0.875rem;
     text-align: center;
+}
+@media screen and (max-width: 600px) {
+    header {
+        flex-flow: column;
+        display: flex;
+    }
+
+    header a {
+        border-bottom: white solid thin;
+        height: 2rem;
+        width: 100%;
+    }
+
+    header a.logo {
+        border-bottom-width:medium ;    
+        width: 100%;
+    }
+
+    header {
+        position: static;
+    }
+
+    aside {
+        display: none;
+    }
 }
 /* ----home page---- */
 .welcome {
