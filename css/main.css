@@ -42,6 +42,7 @@ header a.curPage {
 }
 header a.logo{
     width: 20vw;
+    min-width: 10rem;
     padding-left:2rem;
     justify-content: flex-start;
     font-weight: bold;
@@ -122,33 +123,6 @@ footer {
     font-size: 0.875rem;
     text-align: center;
 }
-/* ----madia---- */
-@media screen and (max-width: 900px){
-aside {
-        display: none;
-    }
-}
-@media screen and (max-width: 600px) {
-    header {
-        flex-flow: column;
-        display: flex;
-    }
-
-    header a {
-        border-bottom: white solid thin;
-        height: 2rem;
-        width: 100%;
-    }
-
-    header a.logo {
-        border-bottom-width:medium ;    
-        width: 100%;
-    }
-
-    header {
-        position: static;
-    }
-}
 /* ----home page---- */
 .welcome {
     /* layout */
@@ -168,24 +142,47 @@ aside {
 }
 .welcome h1 {
     font-size: 3rem;
-    margin: 0.5em 0 0.5rem 0;
+    margin: 0.5em 0 ;
 }
 .welcome h2 {
     font-size: 2rem;
     margin: 0 0 1.5rem 0;
 }
 .welcome img {
-    max-width: 95vmin;
+    max-width: 70vmin;
+    min-width: 24rem;
 }
-.welcome .temp {
+.welcome a.temp {
     /* delinkify */
     text-decoration: none;
     color: #ffffff;
     /* posi */
     position: absolute;
-    bottom: 0;
+    top:90vmin;
     z-index: 1;
 }
 .welcome a.temp:hover {
     text-decoration: underline;
+}
+/* ----madia---- */
+@media screen and (max-width: 960px) {
+    aside {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        flex-flow: column;
+        display: flex;
+    }
+    header a {
+        border-bottom: white solid thin;
+        height: 2rem;
+        width: 100%;
+    }
+    header a.logo {
+        border-bottom-width: medium;
+        width: 100%;
+    }
+    .welcome a.temp{top: 100vmax;}
 }
