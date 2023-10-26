@@ -12,7 +12,7 @@ header{
     top: 0;
     /* layout */
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     /* bg */
     background-color: #d9b3ff;
 }
@@ -20,6 +20,7 @@ header a{
     /* box */
     max-width: 6rem;
     min-width: 4rem;
+    /* layout */
     flex: 1 1 0;
     height: 2rem;
     /* posi */
@@ -52,6 +53,8 @@ header a.logo{
     font-weight: bold;
 }
 header a.logo:hover {text-decoration: none;}
+@media screen and (min-width: 600px) {
+    header a{width: 100%;}}
 /* ----main---- */
 main{
     display: flex;
@@ -153,8 +156,7 @@ footer {
     margin: 0 0 1.5rem 0;
 }
 .welcome img {
-    min-width: 24rem;
-    max-width: 32rem;
+    max-width: 95vmin;
 }
 .welcome .temp {
     /* delinkify */
