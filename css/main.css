@@ -17,6 +17,7 @@ header{
     background-color: #d9b3ff;
 }
 header a{
+    overflow: hidden;
     /* box */
     width: 6rem;
     height: 2rem;
@@ -40,7 +41,7 @@ header a.curPage {
     background: #ffffff;
 }
 header a.logo{
-    width: 25vw;
+    width: 20vw;
     padding-left:2rem;
     justify-content: flex-start;
     font-weight: bold;
@@ -50,10 +51,11 @@ header a.logo:hover {text-decoration: none;}
 main{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
 }
 aside{
     /* layout */
-    width: 25vw;
+    width: 20vw;
     display: flex;
     flex-flow: column nowrap;
     padding: 3em 2em;
@@ -120,6 +122,12 @@ footer {
     font-size: 0.875rem;
     text-align: center;
 }
+/* ----madia---- */
+@media screen and (max-width: 900px){
+aside {
+        display: none;
+    }
+}
 @media screen and (max-width: 600px) {
     header {
         flex-flow: column;
@@ -139,10 +147,6 @@ footer {
 
     header {
         position: static;
-    }
-
-    aside {
-        display: none;
     }
 }
 /* ----home page---- */
