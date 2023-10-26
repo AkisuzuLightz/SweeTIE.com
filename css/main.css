@@ -17,11 +17,10 @@ header{
     background-color: #d9b3ff;
 }
 header a{
-    overflow: hidden;
-    /* box */
+    /* size */
     width: 6rem;
     height: 2rem;
-    /* posi */
+    /* layout */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,6 +49,7 @@ header a.logo{
 header a.logo:hover {text-decoration: none;}
 /* ----main---- */
 main{
+    /* layout */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -128,13 +128,9 @@ footer {
     /* layout */
     display: flex;
     flex-flow: column nowrap;
-    place-items: center center;
+    align-items: center;
     /* bg */
-    margin: 0;
-    padding: 1rem 0 0 0;
-    background-color: #ffffff;
-    background-image: linear-gradient(60deg, #b3ecff, #ffffff00, #ffb3d9);
-    background-attachment: fixed;
+    background: linear-gradient(60deg, #b3ecff, #ffffff00, #ffb3d9) fixed;
     /* txt */
     color: #ffffff;
     text-align: center;
@@ -148,20 +144,24 @@ footer {
     font-size: 2rem;
     margin: 0 0 1.5rem 0;
 }
-.welcome img {
-    max-width: 70vmin;
-    min-width: 24rem;
+.welcome .entry {
+    /* debug */
+    width: 100%;
+    /* bg */
+    height: 100vmin;
+    background: url("../home/welcomePic1.png") no-repeat center 100%;
+    background-size: 100vmin;
+    /* layout */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-.welcome a.temp {
+.welcome .entry a{
     /* delinkify */
     text-decoration: none;
     color: #ffffff;
-    /* posi */
-    position: absolute;
-    top:90vmin;
-    z-index: 1;
 }
-.welcome a.temp:hover {
+.welcome .entry a:hover {
     text-decoration: underline;
 }
 /* ----madia---- */
@@ -184,5 +184,4 @@ footer {
         border-bottom-width: medium;
         width: 100%;
     }
-    .welcome a.temp{top: 100vmax;}
 }
