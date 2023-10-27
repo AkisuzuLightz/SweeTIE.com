@@ -1,0 +1,40 @@
+.welcome {
+    /* layout */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* bg */
+    background: linear-gradient(60deg, #b3ecff, #ffffff00, #ffb3d9) fixed;
+    /* txt */
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px 0px 0.5rem #404040;
+}
+.welcome h1 {
+    font-size: 3rem;
+    margin: 0.5em 0 ;
+}
+.welcome h2 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+}
+.welcome .entry {
+    /* debug */
+    width: 100%;
+    /* bg */
+    height: 100vmin;
+    background: url("../home/welcomePic1.png") no-repeat center 100%;
+    background-size: 100vmin;
+    /* layout */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.welcome .entry a{
+    /* delinkify */
+    text-decoration: none;
+    color: #ffffff;
+}
+.welcome .entry a:hover {
+    text-decoration: underline;
+}
