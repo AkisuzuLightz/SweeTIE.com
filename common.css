@@ -74,7 +74,7 @@ header .btn svg {
     margin-left: 0.5rem;
     color: var(--day-basic);
 }
-header .btn svg#mobiinecle-only {display: none;}
+header .btn svg#mobile-only {display: none;}
 header svg{size-adjust: 200% ;}
 /* ----main---- */
 main{
@@ -170,5 +170,5 @@ footer {
     header a:not(.logo){width:100%;}
     header a.nav-page{border-bottom:var(--day-basic) solid thin;}
     header a.cur-page{border-bottom:var(--day-critical) solid thin;}
-    header .btn i#mobile-only{display:inline;}
+    header .btn svg#mobile-only{display:inline;}
 }
