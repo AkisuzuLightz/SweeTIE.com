@@ -56,9 +56,8 @@ header nav a.cur-page {
 /* --in a-- */
 header nav a .nav-txt:hover{text-decoration: underline;}
 a:active{font-weight: bold;}
-header nav a i{
-    font-size: 1.25rem;
-    padding-right: 0.25rem;
+header nav a svg{
+    margin-right:0.5rem ;
     text-decoration: none;
 }
 /* --btn-- */
@@ -71,12 +70,12 @@ header .btn{
     position: absolute;
     right:2rem;
 }
-header .btn i {
-    font-size: 1.25rem;
-    padding: 0.25rem;
+header .btn svg {
+    margin-left: 0.5rem;
     color: var(--day-basic);
 }
-header .btn i#mobile-only {display: none;}
+header .btn svg#mobiinecle-only {display: none;}
+header svg{size-adjust: 200% ;}
 /* ----main---- */
 main{
     /* layout */
