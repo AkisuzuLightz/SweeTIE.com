@@ -35,6 +35,7 @@
     text-decoration: none;
     color: #ffffff;
 }
-.welcome .entry a:hover {
-    text-decoration: underline;
+.welcome .entry a :hover {
+    font-size: 2.5rem;
+    transition: 500ms;
 }

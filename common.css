@@ -17,8 +17,7 @@ header{
     top: 0;
     background-color: var(--day-critical);
 }
-header a{
-    padding: 0.5rem;
+header  a{
     text-decoration: none;
     color:var(--day-basic);
 }
@@ -27,12 +26,13 @@ header nav{
     flex-flow: row nowrap;
     padding: 0 2rem;}
 .logo{
-    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
     width: 20%;
     min-width: fit-content;
     max-width: 14rem;
     border-right:var(--day-basic) solid 2px;
-    font-weight: bold
+    font-weight: bold;
 }
 .mob-btn,.mob-tab{display: none;}
 .nav-con{
@@ -48,6 +48,7 @@ header nav{
     flex: 1 0 auto;
 }
 .nav-con .nav-tab a{
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,8 +60,11 @@ header nav{
     color:var(--day-critical);
     background:var(--day-basic);
 }
-.nav-con .nav-tab a .nav-txt:hover{text-decoration: underline;}
-.nav-con .nav-tab a .nav-txt:active{font-weight: bold;}
+.nav-con .nav-tab a:hover{
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: 500ms;
+}
 .nav-con .nav-tab svg{
     margin-right:0.5rem ;
     text-decoration: none;
@@ -141,6 +145,7 @@ article p{text-align: justify;}
 /* article a */
 article a{
     text-decoration: none;
+    font-weight: bold;
     color: var(--day-critical);
 }
 article a:hover{text-decoration: underline;}
